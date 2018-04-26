@@ -9,4 +9,14 @@
                #:lparallel)
   :serial t
   :components ((:file "package")
-               (:file "contact")))
+               (:file "contact"))
+  :in-order-to ((test-op (test-op #:contact/test))))
+
+(defsystem #:contact/test
+  :description "Tests for the contact system"
+  :depends-on (#:contact
+               #:prove)
+  :components ((:file "package")
+               (:file "contact-test"))
+  :perform (test-op :after (op c)
+                    (funcall (intern #.(string :run) :prove) c)))
