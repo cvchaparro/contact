@@ -1,5 +1,11 @@
 (defpackage #:contact
-  (:use #:cl))
+  (:use #:cl
+        #:dexador
+        #:plump
+        #:lquery
+        #:lparallel)
+  (:shadow get
+           delete))
 
 (defpackage #:contact/test
   (:use #:cl
