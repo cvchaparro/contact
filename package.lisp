@@ -5,7 +5,11 @@
         #:lquery
         #:lparallel)
   (:shadow get
-           delete))
+           delete)
+  (:export
+   #:*duckduckgo-search-url*
+   #:url-encode
+   #:get-search-url))
 
 (defpackage #:contact/test
   (:use #:cl
