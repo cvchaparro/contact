@@ -6,7 +6,8 @@
   :depends-on (#:dexador
                #:plump
                #:lquery
-               #:lparallel)
+               #:lparallel
+               #:quri)
   :serial t
   :components ((:file "package")
                (:file "contact"))

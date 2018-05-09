@@ -3,12 +3,12 @@
         #:dexador
         #:plump
         #:lquery
-        #:lparallel)
+        #:lparallel
+        #:quri)
   (:shadow get
            delete)
   (:export
    #:*duckduckgo-search-url*
-   #:url-encode
    #:get-search-url))
 
 (defpackage #:contact/test
